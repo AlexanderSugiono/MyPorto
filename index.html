@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- GANTI JUDUL HALAMAN DI SINI (untuk tab browser) -->
+  <title>Achmad Saifudin | Junior Full-Stack Developer</title>
+  <meta name="description" content="Portofolio pribadi Achmad Saifudin - Junior Full-Stack Developer. Web developer yang fokus pada kode bersih, efisien, dan mudah dipelihara."/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Konfigurasi tema Tailwind (wajib berada di dekat CDN agar tema khusus bisa dibaca) -->
+  <script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-surface":"#dee2f6","tertiary":"#fcf5ff","error":"#ffb4ab","tertiary-fixed-dim":"#d0bcff","on-error":"#690005","on-surface-variant":"#b9cacb","surface-container-lowest":"#090e1c","on-tertiary":"#3c0091","tertiary-container":"#e2d4ff","on-tertiary-container":"#6e3cd8","background":"#0e1321","inverse-primary":"#00696f","on-secondary-fixed-variant":"#005236","tertiary-fixed":"#e9ddff","on-secondary-container":"#00311f","on-secondary-fixed":"#002113","inverse-surface":"#dee2f6","on-primary-fixed-variant":"#004f53","secondary-fixed-dim":"#4edea3","surface-container-highest":"#303444","on-primary":"#00373a","outline-variant":"#3a494b","surface-container":"#1a1f2e","surface-variant":"#303444","primary-fixed-dim":"#00dce6","primary-fixed":"#6ff6ff","secondary":"#4edea3","surface-tint":"#00dce6","surface-bright":"#343948","surface":"#0e1321","on-secondary":"#003824","on-primary-container":"#006a70","surface-container-low":"#161b2a","error-container":"#93000a","on-tertiary-fixed-variant":"#5516be","secondary-fixed":"#6ffbbe","primary":"#e0fdff","outline":"#849495","surface-dim":"#0e1321","on-error-container":"#ffdad6","inverse-on-surface":"#2b303f","surface-container-high":"#252a39","secondary-container":"#00a572","on-background":"#dee2f6","on-tertiary-fixed":"#23005c","on-primary-fixed":"#002022","primary-container":"#00f2fe"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-3xl":"4rem","space-xs":"0.5rem","max-container":"76rem","space-sm":"0.75rem","gutter-mobile":"1rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-4xl":"6rem","space-lg":"1.5rem","space-md":"1rem","space-2xl":"3rem","space-xxs":"0.25rem"},"fontFamily":{"headline-lg-mobile":["Plus Jakarta Sans"],"display-xl-mobile":["Plus Jakarta Sans"],"label-caps":["JetBrains Mono"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"code-sm":["JetBrains Mono"],"display-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"code-md":["JetBrains Mono"],"body-sm":["Inter"],"code-lg":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-xl-mobile":["38px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"code-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"display-xl":["64px",{"lineHeight":"72px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-md":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"code-lg":["15px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script>
+
+  <!-- Style & Script Eksternal -->
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+    <div class="h-16 max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md">
+        <a class="flex items-center gap-space-xs px-space-sm py-space-xxs rounded bg-surface-container-high/60 shadow-[0_0_12px_rgba(0,242,254,0.15)] group hover:bg-surface-container-high transition-colors" data-path="developer-portfolio" href="#">
+          <span class="font-label-caps text-label-caps text-primary-fixed">&lt;/&gt;</span>
+          <span class="font-code-md text-code-md font-semibold text-on-surface tracking-tight group-hover:text-primary-container transition-colors">Saifudin.dev</span>
+        </a>
+        <div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xxs rounded-full bg-surface-container-high/40">
+          <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span>
+          <span class="font-code-sm text-code-sm text-secondary-fixed-dim uppercase tracking-wider">Available for hire</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-space-xs p-space-xxs rounded-full bg-surface-container-low/70 shadow-[inset_0_1px_4px_rgba(0,0,0,0.4)]" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-full shadow-[0_0_16px_rgba(0,242,254,0.35)]">
+        <a class="font-code-sm text-code-sm px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="tentang" href="#tentang">#tentang</a>
+        <a class="font-code-sm text-code-sm px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="skills" href="#skills">#skills</a>
+        <a class="font-code-sm text-code-sm px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="proyek" href="#proyek">#proyek</a>
+        <a class="font-code-sm text-code-sm px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="pendidikan" href="#pendidikan">#pendidikan</a>
+        <a class="font-code-sm text-code-sm px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="kontak" href="#kontak">#kontak</a>
+      </nav>
+      <div class="flex items-center gap-space-md">
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(224,253,255,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="w-full pt-16 bg-background flex-1">
+    <div class="flex flex-col w-full relative overflow-hidden bg-dot-grid">
+
+      <!-- Ambient Glow Elements -->
+      <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-primary-container/10 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+      <div class="absolute top-[1400px] -right-40 w-[500px] h-[500px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+      <div class="absolute top-[2600px] -left-40 w-[550px] h-[550px] bg-tertiary-container/5 blur-[140px] rounded-full pointer-events-none -z-10"></div>
+
+      <!-- ================= HERO ================= -->
+      <section class="relative w-full max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop pt-space-2xl pb-space-4xl flex flex-col justify-center min-h-[calc(100vh-4rem)]">
+        <!-- Top System Subheader & Status Pill -->
+        <div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg reveal-init">
+          <div class="flex items-center gap-space-xs px-space-sm py-space-xxs rounded bg-surface-container-high/80 backdrop-blur-md border border-primary-container/20 shadow-[0_0_15px_rgba(0,242,254,0.1)]">
+            <span class="text-primary-container font-code-sm text-code-sm">&gt;</span>
+            <span class="font-code-sm text-code-sm text-on-surface tracking-tight font-medium">const developer = { status: <span class="text-secondary">"Building scalable systems"</span>, passion: <span class="text-primary-fixed-dim">1.0</span> }</span>
+          </div>
+          <div class="flex items-center gap-space-xs px-space-sm py-space-xxs rounded-full bg-surface-container-low/90 border border-secondary/30">
+            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-80"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span>
+            <span class="font-code-sm text-code-sm text-secondary-fixed-dim">Available for freelance &amp; full-time</span>
+          </div>
+        </div>
+
+        <!-- Hero Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+          <!-- Text Narrative (Col 7) -->
+          <div class="lg:col-span-7 flex flex-col gap-space-md reveal-init">
+            <div class="flex items-center gap-space-xs">
+              <span class="w-8 h-[2px] bg-primary-container"></span>
+              <span class="font-code-sm text-code-sm text-primary-container uppercase tracking-widest">Junior Full-Stack Developer</span>
+            </div>
+            <!-- GANTI NAMA ASLI DI SINI -->
+            <h1 class="font-display-xl text-headline-lg lg:text-display-xl font-extrabold text-on-surface tracking-tight leading-[1.08]">
+              Halo, Saya <span class="text-on-surface">Achmad Saifudin</span>
+              <span class="block mt-space-xs bg-gradient-to-r from-primary-container via-primary-fixed to-secondary bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(0,242,254,0.4)]">
+                Junior Full-Stack Developer.
+              </span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              Membangun aplikasi web modern dan responsif dengan fokus pada kode yang bersih, efisien, dan mudah dipelihara. Terbuka untuk terus belajar, berkolaborasi, dan menghadirkan pengalaman pengguna yang interaktif dan bermanfaat.
+            </p>
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+              <a class="group relative inline-flex items-center gap-space-sm px-space-lg py-space-sm rounded bg-primary-container text-on-primary-container font-headline-sm text-code-lg font-bold shadow-[0_0_24px_rgba(0,242,254,0.4)] hover:shadow-[0_0_36px_rgba(0,242,254,0.7)] hover:bg-primary-fixed transition-all duration-300 transform hover:-translate-y-0.5" href="#proyek">
+                <span>Lihat Proyek</span>
+                <span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1.5 font-bold">arrow_forward</span>
+              </a>
+              <a class="group relative overflow-hidden inline-flex items-center gap-space-sm px-space-lg py-space-sm rounded bg-surface-container-high/60 backdrop-blur-md border border-primary-container/30 text-primary-fixed font-code-lg text-code-lg transition-all duration-300 hover:border-primary-container hover:text-primary-container hover:shadow-[0_0_20px_rgba(0,242,254,0.25)]" href="#resume">
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-primary-container/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span class="material-symbols-outlined text-[18px] text-primary-fixed group-hover:text-primary-container transition-colors">description</span>
+                <span class="relative z-10 font-semibold">Download CV</span>
+              </a>
+              <a class="inline-flex items-center gap-space-xxs text-on-surface-variant hover:text-secondary font-code-sm text-code-sm underline underline-offset-4 decoration-outline-variant hover:decoration-secondary transition-colors py-space-xs" href="#kontak">
+                <span>Hubungi Saya Langsung</span>
+                <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Avatar Visual Showcase (Col 5) -->
+          <div class="lg:col-span-5 relative flex justify-center items-center reveal-init">
+            <div class="relative p-2 rounded-2xl bg-surface-container-low/80 backdrop-blur-xl border border-primary-container/25 shadow-[0_0_40px_rgba(0,242,254,0.15)] group">
+              <!-- Corner brackets (Cybernetic accents) -->
+              <span class="absolute -top-1.5 -left-1.5 w-5 h-5 border-t-2 border-l-2 border-primary-container rounded-tl-sm pointer-events-none"></span>
+              <span class="absolute -top-1.5 -right-1.5 w-5 h-5 border-t-2 border-r-2 border-primary-container rounded-tr-sm pointer-events-none"></span>
+              <span class="absolute -bottom-1.5 -left-1.5 w-5 h-5 border-b-2 border-l-2 border-primary-container rounded-bl-sm pointer-events-none"></span>
+              <span class="absolute -bottom-1.5 -right-1.5 w-5 h-5 border-b-2 border-r-2 border-primary-container rounded-br-sm pointer-events-none"></span>
+              <!-- Image Container -->
+              <div class="relative w-72 sm:w-80 h-80 sm:h-96 rounded-xl overflow-hidden bg-surface-container-highest">
+                <!-- GANTI FOTO PROFIL ASLI DI SINI (hapus src placeholder, ganti dengan path foto, misal: assets/profile.jpg) -->
+                <img alt="Achmad Saifudin - Junior Full Stack Developer Portrait" class="w-full h-full object-cover contrast-125 brightness-95 group-hover:scale-105 transition-all duration-700 ease-out" src="assets/GUWA2.jpeg"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-70"></div>
+              </div>
+              <!-- Floating Tech Badge 1 (Top Right) -->
+              <div class="absolute -top-4 -right-4 sm:-right-6 px-space-sm py-space-xxs rounded-lg bg-surface-container-high/90 backdrop-blur-md border border-primary-container/40 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center gap-space-xs animate-bounce slow-bounce">
+                <span class="material-symbols-outlined text-primary-container text-[16px]">bolt</span>
+                <span class="font-code-sm text-code-sm text-on-surface font-semibold">Laravel 11 &amp; Vue 3</span>
+              </div>
+              <!-- Floating Tech Badge 2 (Bottom Left) -->
+              <div class="absolute -bottom-4 -left-4 sm:-left-6 px-space-sm py-space-xxs rounded-lg bg-surface-container-high/90 backdrop-blur-md border border-secondary/40 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+                <span class="font-code-sm text-code-sm text-on-surface font-semibold">REST &amp; GraphQL APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini Tech Stack Ribbon -->
+        <div class="mt-space-3xl pt-space-md border-t border-surface-container-highest/40 flex flex-col md:flex-row items-center justify-between gap-space-md reveal-init">
+          <div class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-[16px] text-primary-container">terminal</span>
+            <span>CORE_TECH_INDEX:</span>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-space-xs sm:gap-space-sm">
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">Laravel</span>
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">Vue.js</span>
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">React</span>
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">TypeScript</span>
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">Tailwind CSS</span>
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">MySQL</span>
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">PostgreSQL</span>
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">Docker</span>
+            <span class="px-space-sm py-1 rounded bg-surface-container-high/50 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container transition-colors">Git</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TENTANG SAYA (#tentang) ================= -->
+      <section class="w-full max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl scroll-mt-20" id="tentang">
+        <div class="flex items-center gap-space-sm mb-space-xl reveal-init">
+          <span class="font-code-md text-code-md text-primary-container font-bold">01.</span>
+          <h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-on-surface tracking-tight">Tentang Saya</h2>
+          <div class="h-[1px] flex-1 bg-surface-container-highest ml-space-md"></div>
+        </div>
+        <!-- Terminal Tech Container -->
+        <div class="rounded-xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/40 shadow-[0_8px_32px_rgba(0,0,0,0.6)] overflow-hidden reveal-init">
+          <!-- macOS Terminal Bar -->
+          <div class="px-space-md py-space-xs bg-surface-container-high/70 border-b border-outline-variant/30 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-[#ef4444] inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-[#f59e0b] inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-[#10b981] inline-block"></span>
+              <span class="ml-space-sm font-code-sm text-code-sm text-on-surface-variant">achmad@mainframe: ~/about-me.ts</span>
+            </div>
+            <div class="flex items-center gap-space-xs text-on-surface-variant font-code-sm text-code-sm">
+              <span class="material-symbols-outlined text-[16px]">terminal</span>
+              <span>bash (utf-8)</span>
+            </div>
+          </div>
+          <!-- Terminal Body / Split Panels -->
+          <div class="p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+            <!-- Left: Narrative Developer Bio (7 Cols) -->
+            <div class="lg:col-span-7 flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p>
+                Perjalanan saya di dunia pemrograman web dimulai dari rasa penasaran untuk memahami bagaimana sebuah situs bekerja dari dalam—mulai dari data, logika, hingga tampilan di layar. Kini saya fokus mengembangkan diri sebagai <strong class="text-on-surface font-semibold">Junior Full-Stack Developer</strong> yang membangun aplikasi web end-to-end: dari struktur database hingga antarmuka yang interaktif.
+              </p>
+              <p>
+                Saya terbiasa bekerja dengan <strong class="text-on-surface font-semibold">Laravel &amp; Node.js</strong> di sisi server, serta <strong class="text-on-surface font-semibold">Vue 3, React, dan Tailwind CSS</strong> di sisi klien. Saya terus mengasah praktik terbaik seperti Clean Architecture, prinsip SOLID, dan penulisan kode yang mudah diuji.
+              </p>
+              <p>
+                Motivasi saya adalah memecahkan masalah nyata dengan solusi perangkat lunak yang sederhana namun efektif. Saya aktif belajar, terbuka terhadap masukan, dan selalu berusaha memberikan yang terbaik di setiap tugas atau proyek yang saya kerjakan.
+              </p>
+            </div>
+            <!-- Right: Philosophy Code Snippet Widget (5 Cols) -->
+            <div class="lg:col-span-5 flex flex-col justify-between rounded-lg bg-surface-container-lowest p-space-md border border-outline-variant/30 font-code-sm text-code-sm text-on-surface shadow-inner">
+              <div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high/60 text-on-surface-variant">
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-primary-container">code</span> Philosophy.ts</span>
+                <span class="text-secondary text-[11px]">Compiled // No errors</span>
+              </div>
+              <pre class="py-space-sm overflow-x-auto text-[12px] leading-5 text-on-surface/90"><code><span class="text-tertiary-fixed-dim">interface</span> <span class="text-primary-fixed">EngineeringStandard</span> {
+  maintainability: <span class="text-secondary">"high"</span>;
+  testCoverage: <span class="text-secondary">"&gt;=85%"</span>;
+  latencyBudget: <span class="text-primary-fixed-dim">number</span>;
+}
+
+<span class="text-tertiary-fixed-dim">const</span> <span class="text-primary-fixed">mindset</span>: <span class="text-primary-fixed">EngineeringStandard</span> = {
+  maintainability: <span class="text-secondary">"high"</span>,
+  testCoverage: <span class="text-secondary">"&gt;=85%"</span>,
+  latencyBudget: <span class="text-tertiary-fixed-dim">200</span>, <span class="text-outline">// ms target</span>
+};
+
+<span class="text-outline">// Core Philosophy</span>
+<span class="text-tertiary-fixed-dim">function</span> <span class="text-primary-fixed">shipSolution</span>(issue: <span class="text-primary-fixed-dim">Problem</span>): <span class="text-primary-fixed-dim">Product</span> {
+  <span class="text-tertiary-fixed-dim">const</span> cleanCode = refactor(issue);
+  <span class="text-tertiary-fixed-dim">const</span> scalable = optimizeArchitecture(cleanCode);
+  <span class="text-tertiary-fixed-dim">return</span> deployWithConfidence(scalable);
+}</code></pre>
+              <div class="p-space-xs rounded bg-surface-container-high/40 border border-primary-container/20 flex items-center justify-between">
+                <span class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span> STATUS: READY_TO_BUILD</span>
+                <span class="font-label-caps text-label-caps text-primary-container">ES2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS (#skills) ================= -->
+      <section class="w-full max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl scroll-mt-20" id="skills">
+        <div class="flex items-center gap-space-sm mb-space-xs reveal-init">
+          <span class="font-code-md text-code-md text-primary-container font-bold">02.</span>
+          <h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-on-surface tracking-tight">Keahlian &amp; Tech Stack</h2>
+          <div class="h-[1px] flex-1 bg-surface-container-highest ml-space-md"></div>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-space-xl max-w-2xl reveal-init">
+          Alat kerja dan instrumen teknologi yang saya gunakan sehari-hari untuk mendesain arsitektur tangguh dan pengalaman pengguna web tanpa friksi.
+        </p>
+        <!-- 3 Tech Glass Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+          <!-- Card 1: Frontend Development -->
+          <div class="group relative rounded-xl bg-surface-container-low/70 backdrop-blur-xl border border-outline-variant/30 p-space-lg shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:border-primary-container/60 hover:shadow-[0_0_30px_rgba(0,242,254,0.15)] transition-all duration-300 transform hover:-translate-y-1 reveal-init">
+            <div class="flex items-center gap-space-sm mb-space-md">
+              <div class="w-10 h-10 rounded-lg bg-primary-container/10 border border-primary-container/30 flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[22px]">desktop_windows</span></div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Frontend Dev</h3>
+                <span class="font-code-sm text-code-sm text-primary-fixed-dim">UI/UX &amp; Reactive Client</span>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">Membangun antarmuka interaktif dengan komponen modular, animasi mikro fluid, dan aksesibilitas tinggi.</p>
+            <div class="flex flex-wrap gap-space-xs">
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,242,254,0.3)] transition-all cursor-default">Vue.js 3</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,242,254,0.3)] transition-all cursor-default">React.js</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,242,254,0.3)] transition-all cursor-default">Tailwind CSS</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,242,254,0.3)] transition-all cursor-default">TypeScript</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,242,254,0.3)] transition-all cursor-default">Alpine.js</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,242,254,0.3)] transition-all cursor-default">HTML5 &amp; CSS3</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-primary-container hover:text-primary-container hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,242,254,0.3)] transition-all cursor-default">Vite / Webpack</span>
+            </div>
+          </div>
+          <!-- Card 2: Backend Development -->
+          <div class="group relative rounded-xl bg-surface-container-low/70 backdrop-blur-xl border border-outline-variant/30 p-space-lg shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:border-secondary/60 hover:shadow-[0_0_30px_rgba(78,222,163,0.15)] transition-all duration-300 transform hover:-translate-y-1 reveal-init">
+            <div class="flex items-center gap-space-sm mb-space-md">
+              <div class="w-10 h-10 rounded-lg bg-secondary/10 border border-secondary/30 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[22px]">dns</span></div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Backend Dev</h3>
+                <span class="font-code-sm text-code-sm text-secondary-fixed-dim">Engine &amp; Database Architecture</span>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">Mengembangkan endpoint API performa tinggi, validasi data ketat, dan pengelolaan transaksi database kompleks.</p>
+            <div class="flex flex-wrap gap-space-xs">
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-secondary hover:text-secondary hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(78,222,163,0.3)] transition-all cursor-default">Laravel 11</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-secondary hover:text-secondary hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(78,222,163,0.3)] transition-all cursor-default">PHP 8.3</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-secondary hover:text-secondary hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(78,222,163,0.3)] transition-all cursor-default">Node.js / Express</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-secondary hover:text-secondary hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(78,222,163,0.3)] transition-all cursor-default">RESTful APIs</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-secondary hover:text-secondary hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(78,222,163,0.3)] transition-all cursor-default">MySQL &amp; Postgres</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-secondary hover:text-secondary hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(78,222,163,0.3)] transition-all cursor-default">Redis</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-secondary hover:text-secondary hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(78,222,163,0.3)] transition-all cursor-default">GraphQL</span>
+            </div>
+          </div>
+          <!-- Card 3: DevOps & Tools -->
+          <div class="group relative rounded-xl bg-surface-container-low/70 backdrop-blur-xl border border-outline-variant/30 p-space-lg shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:border-tertiary-fixed-dim/60 hover:shadow-[0_0_30px_rgba(208,188,255,0.15)] transition-all duration-300 transform hover:-translate-y-1 reveal-init">
+            <div class="flex items-center gap-space-sm mb-space-md">
+              <div class="w-10 h-10 rounded-lg bg-tertiary-container/10 border border-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary-fixed-dim group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[22px]">developer_board</span></div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">DevOps &amp; Tools</h3>
+                <span class="font-code-sm text-code-sm text-tertiary-fixed-dim">Infrastructure &amp; Workflows</span>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">Automasi deployment berulang, containerization aplikasi, dan monitoring performa server terdistribusi.</p>
+            <div class="flex flex-wrap gap-space-xs">
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-tertiary-fixed-dim hover:text-tertiary-fixed-dim hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(208,188,255,0.3)] transition-all cursor-default">Git &amp; GitHub</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-tertiary-fixed-dim hover:text-tertiary-fixed-dim hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(208,188,255,0.3)] transition-all cursor-default">Docker</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-tertiary-fixed-dim hover:text-tertiary-fixed-dim hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(208,188,255,0.3)] transition-all cursor-default">Nginx</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-tertiary-fixed-dim hover:text-tertiary-fixed-dim hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(208,188,255,0.3)] transition-all cursor-default">Linux CLI</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-tertiary-fixed-dim hover:text-tertiary-fixed-dim hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(208,188,255,0.3)] transition-all cursor-default">CI/CD Actions</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-tertiary-fixed-dim hover:text-tertiary-fixed-dim hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(208,188,255,0.3)] transition-all cursor-default">Figma</span>
+              <span class="relative px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/30 font-code-sm text-code-sm text-on-surface hover:border-tertiary-fixed-dim hover:text-tertiary-fixed-dim hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(208,188,255,0.3)] transition-all cursor-default">Postman</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROYEK (#proyek) ================= -->
+      <section class="w-full max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl scroll-mt-20" id="proyek">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl reveal-init">
+          <div>
+            <div class="flex items-center gap-space-sm mb-space-xs">
+              <span class="font-code-md text-code-md text-primary-container font-bold">03.</span>
+              <h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-on-surface tracking-tight">Karya Unggulan</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+              Seleksi implementasi arsitektur perangkat lunak terkini yang memecahkan masalah operasional dan menyajikan antarmuka presisi.
+            </p>
+          </div>
+          <!-- Filter Tabs (label + jumlah diisi otomatis oleh script.js) -->
+          <div class="flex flex-wrap gap-space-xs p-1 rounded bg-surface-container-high/60 border border-outline-variant/30 self-start md:self-auto">
+            <button class="project-filter-btn px-space-md py-space-xxs rounded font-code-sm text-code-sm font-semibold bg-primary-container text-on-primary-container shadow-[0_0_12px_rgba(0,242,254,0.3)] transition-all" data-filter="all">Semua</button>
+            <button class="project-filter-btn px-space-md py-space-xxs rounded font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface transition-all" data-filter="fullstack">Full-Stack</button>
+            <button class="project-filter-btn px-space-md py-space-xxs rounded font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface transition-all" data-filter="webapp">Web App</button>
+            <button class="project-filter-btn px-space-md py-space-xxs rounded font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface transition-all" data-filter="ecommerce">E-Commerce</button>
+          </div>
+        </div>
+        <!-- Project Grid: card-card dirender secara dinamis oleh script.js dari array PROJECTS -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-xl" id="projectGrid"></div>
+      </section>
+
+      <!-- ================= PENDIDIKAN & PENGALAMAN (#pendidikan) ================= -->
+      <section class="w-full max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl scroll-mt-20" id="pendidikan">
+        <div class="flex items-center gap-space-sm mb-space-xs reveal-init">
+          <span class="font-code-md text-code-md text-primary-container font-bold">04.</span>
+          <!-- <h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-on-surface tracking-tight">Karier &amp; Edukasi</h2> -->
+          <h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-on-surface tracking-tight">Riwayat Pendidikan</h2>
+          <div class="h-[1px] flex-1 bg-surface-container-highest ml-space-md"></div>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-space-2xl max-w-xl reveal-init">
+          Bagian ini akan menampilkan perjalanan karier, pengalaman kerja, serta latar belakang pendidikan saya.
+        </p>
+
+        <div class="relative pl-6 sm:pl-8 border-l border-primary-container/25 space-y-space-2xl">
+          <!-- ISI PENGALAMAN KERJA ASLI DI SINI -->
+          <div class="relative reveal-init">
+            <span class="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full bg-background border-2 border-primary-container shadow-[0_0_12px_rgba(0,242,254,0.8)]">
+              <span class="block w-1.5 h-1.5 m-auto mt-0.5 rounded-full bg-primary-container"></span>
+            </span>
+            <div class="p-space-xl lg:p-space-2xl rounded-xl bg-surface-container-low/70 backdrop-blur-md border border-dashed border-outline-variant/50 flex flex-col items-start gap-space-md">
+              <div class="flex items-center gap-space-sm">
+                <span class="w-11 h-11 rounded-xl bg-primary-container/10 border border-primary-container/30 flex items-center justify-center text-primary-container">
+                  <span class="material-symbols-outlined text-[22px]">work</span>
+                </span>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">SMKN 1 Dlanggu</h3>
+                  <span class="font-code-sm text-code-sm text-primary-fixed-dim uppercase tracking-wider">Rekayasa Perangkat Lunak</span>
+                </div>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
+                Menempuh pendidikan di jurusan Rekayasa Perangkat Lunak, mempelajari dasar-dasar pemrograman, pengembangan aplikasi web, basis data, serta praktik langsung membangun proyek nyata seperti Literra, sebuah aplikasi toko buku online dengan sistem multi-role.
+              </p>
+            </div>
+          </div>
+
+          <!-- ISI RIWAYAT PENDIDIKAN ASLI DI SINI -->
+          <!-- <div class="relative reveal-init">
+            <span class="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full bg-background border-2 border-secondary shadow-[0_0_12px_rgba(78,222,163,0.8)]">
+              <span class="block w-1.5 h-1.5 m-auto mt-0.5 rounded-full bg-secondary"></span>
+            </span>
+            <div class="p-space-xl lg:p-space-2xl rounded-xl bg-surface-container-low/70 backdrop-blur-md border border-dashed border-outline-variant/50 flex flex-col items-start gap-space-md">
+              <div class="flex items-center gap-space-sm">
+                <span class="w-11 h-11 rounded-xl bg-secondary/10 border border-secondary/30 flex items-center justify-center text-secondary">
+                  <span class="material-symbols-outlined text-[22px]">school</span>
+                </span>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Pendidikan</h3>
+                  <span class="font-code-sm text-code-sm text-secondary-fixed-dim uppercase tracking-wider">SECTION #04</span>
+                </div>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
+                Riwayat pendidikan akan segera diperbarui.
+              </p>
+            </div>
+          </div> -->
+
+          <!-- ISI SERTIFIKASI/PELATIHAN ASLI DI SINI -->
+          <!-- <div class="relative reveal-init">
+            <span class="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full bg-background border-2 border-tertiary-fixed-dim shadow-[0_0_12px_rgba(208,188,255,0.8)]">
+              <span class="block w-1.5 h-1.5 m-auto mt-0.5 rounded-full bg-tertiary-fixed-dim"></span>
+            </span>
+            <div class="p-space-xl lg:p-space-2xl rounded-xl bg-surface-container-low/70 backdrop-blur-md border border-dashed border-outline-variant/50 flex flex-col items-start gap-space-md">
+              <div class="flex items-center gap-space-sm">
+                <span class="w-11 h-11 rounded-xl bg-tertiary-container/10 border border-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary-fixed-dim">
+                  <span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+                </span>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Sertifikasi/Pelatihan</h3>
+                  <span class="font-code-sm text-code-sm text-tertiary-fixed-dim uppercase tracking-wider">SECTION #04</span>
+                </div>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
+                Riwayat sertifikasi atau pelatihan akan segera diperbarui.
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- ================= RESUME / CV (#resume) ================= -->
+      <section class="w-full max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl scroll-mt-20" id="resume">
+        <div class="relative rounded-2xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low border border-primary-container/30 p-space-xl lg:p-space-2xl shadow-[0_0_50px_rgba(0,0,0,0.7)] overflow-hidden reveal-init">
+          <!-- Ambient Laser Scanline Top Accent -->
+          <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+            <div class="lg:col-span-8 flex flex-col gap-space-sm">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary-container text-[18px]">verified_user</span>
+                <span class="font-code-sm text-code-sm text-primary-container uppercase tracking-widest font-semibold">Resume &amp; Profil</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-on-surface tracking-tight">
+                Tertarik Merekrut atau Berkolaborasi?
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-2xl">
+                Dapatkan ringkasan profil, keahlian teknis, dan cara menghubungi saya dalam satu berkas PDF yang ringkas dan terstruktur. Dokumen ini akan terus saya perbarui seiring perkembangan proyek dan pengalaman.
+              </p>
+            </div>
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-space-md">
+              <!-- GANTI DENGAN PATH FILE CV ASLI (misal: cv-achmad-saifudin.pdf) -->
+              <a class="group relative w-full overflow-hidden px-space-xl py-space-md rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-code-lg font-bold shadow-[0_0_30px_rgba(0,242,254,0.4)] hover:shadow-[0_0_50px_rgba(0,242,254,0.8)] transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-space-sm" href="#" id="downloadCvBtn">
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-white/40 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 ease-linear"></span>
+                <span class="material-symbols-outlined text-[22px] group-hover:animate-bounce">download</span>
+                <span class="relative z-10 tracking-tight">Download CV (PDF)</span>
+              </a>
+              <span class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                Format PDF &bull; Siap Diunduh
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= KONTAK (#kontak) ================= -->
+      <section class="w-full max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl mb-space-2xl scroll-mt-20" id="kontak">
+        <div class="flex items-center gap-space-sm mb-space-xs reveal-init">
+          <span class="font-code-md text-code-md text-primary-container font-bold">05.</span>
+          <h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-on-surface tracking-tight">Hubungi Saya</h2>
+          <div class="h-[1px] flex-1 bg-surface-container-highest ml-space-md"></div>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-space-2xl max-w-2xl reveal-init">
+          Pintu komunikasi selalu terbuka untuk kolaborasi, proyek freelance, pertukaran ide teknologi, atau penawaran kerja sama strategis. Pilih kanal favorit Anda di bawah ini.
+        </p>
+
+        <!-- Panel Kontak Satu Kolom Penuh -->
+        <div class="reveal-init relative overflow-hidden rounded-2xl bg-surface-container-low/70 backdrop-blur-xl border border-outline-variant/40 shadow-[0_8px_32px_rgba(0,0,0,0.5)] p-space-xl lg:p-space-2xl flex flex-col gap-space-2xl">
+          <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+
+          <!-- Kop + Kotak Salin Email -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+            <div class="max-w-2xl">
+              <h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-xxs flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary-container text-[20px]">waving_hand</span> Mari Terhubung
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Salin alamat email saya dengan satu klik, atau terhubung langsung melalui kanal sosial media di bawah ini.
+              </p>
+            </div>
+            <!-- Kotak Email 1-Klik Salin -->
+            <div class="w-full lg:w-auto lg:min-w-[24rem] p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-between gap-space-sm">
+              <div class="flex items-center gap-space-xs overflow-hidden min-w-0">
+                <span class="material-symbols-outlined text-primary-container text-[20px] flex-shrink-0">alternate_email</span>
+                <!-- GANTI EMAIL ASLI DI SINI -->
+                <span class="font-code-md text-code-md text-on-surface truncate" id="emailText">saifudinachmad789@gmail.com</span>
+              </div>
+              <button class="px-space-sm py-space-xxs rounded bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-code-sm text-code-sm font-medium transition-all flex items-center gap-1 flex-shrink-0" id="copyEmailBtn">
+                <span class="material-symbols-outlined text-[14px]">content_copy</span>
+                <span id="copyBtnLabel">Salin</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="h-px bg-outline-variant/30"></div>
+
+          <!-- Sosial Media & Profil -->
+          <h4 class="font-code-sm text-code-sm text-on-surface-variant uppercase tracking-wider">Sosial Media &amp; Profil</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+            <!-- 1. LinkedIn -->
+            <!-- GANTI LINK LINKEDIN ASLI (misal: https://www.linkedin.com/in/achmad-saifudin) -->
+            <a class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container/70 border border-outline-variant/30 hover:border-[#38bdf8] hover:shadow-[0_0_20px_rgba(56,189,248,0.35)] transition-all duration-300 transform hover:-translate-y-1.5" href="https://linkedin.com" rel="noreferrer" target="_blank">
+              <span class="w-8 h-8 rounded bg-[#0284c7]/20 flex items-center justify-center text-[#38bdf8] group-hover:rotate-12 transition-transform duration-300"><span class="font-code-sm font-bold">in</span></span>
+              <div class="min-w-0">
+                <div class="font-code-sm text-code-sm text-on-surface font-semibold">LinkedIn</div>
+                <div class="font-code-sm text-[10px] text-on-surface-variant truncate">/in/achmad-saifudin</div>
+              </div>
+            </a>
+            <!-- 2. GitHub -->
+            <!-- GANTI LINK GITHUB ASLI (misal: https://github.com/achmad-saifudin) -->
+            <a class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container/70 border border-outline-variant/30 hover:border-[#a855f7] hover:shadow-[0_0_20px_rgba(168,85,247,0.35)] transition-all duration-300 transform hover:-translate-y-1.5" href="https://github.com/AlexanderSugiono" rel="noreferrer" target="_blank">
+              <span class="w-8 h-8 rounded bg-[#a855f7]/20 flex items-center justify-center text-[#c084fc] group-hover:rotate-[360deg] transition-transform duration-700 ease-in-out"><span class="material-symbols-outlined text-[18px]">terminal</span></span>
+              <div class="min-w-0">
+                <div class="font-code-sm text-code-sm text-on-surface font-semibold">GitHub</div>
+                <div class="font-code-sm text-[10px] text-on-surface-variant truncate">@achmad-saifudin</div>
+              </div>
+            </a>
+            <!-- 3. Direct Email -->
+            <!-- GANTI EMAIL ASLI DI SINI (pada mailto di bawah ini) -->
+            <a class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container/70 border border-outline-variant/30 hover:border-[#f59e0b] hover:shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all duration-300 transform hover:-translate-y-1.5" href="mailto:saifudin987@example.com">
+              <span class="w-8 h-8 rounded bg-[#f59e0b]/20 flex items-center justify-center text-[#fbbf24] group-hover:scale-125 group-hover:-rotate-6 transition-all duration-300"><span class="material-symbols-outlined text-[18px]">mail</span></span>
+              <div class="min-w-0">
+                <div class="font-code-sm text-code-sm text-on-surface font-semibold">Direct Email</div>
+                <div class="font-code-sm text-[10px] text-on-surface-variant truncate">Kirim Pesan</div>
+              </div>
+            </a>
+            <!-- 4. Instagram -->
+            <!-- GANTI LINK INSTAGRAM ASLI (misal: https://www.instagram.com/achmad.saifudin) -->
+            <a class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container/70 border border-outline-variant/30 hover:border-[#ec4899] hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] transition-all duration-300 transform hover:scale-105" href="https://www.instagram.com/ach.saifdn_?stkn=MTRuazlxOGk3M3E2cg==" rel="noreferrer" target="_blank">
+              <span class="w-8 h-8 rounded bg-gradient-to-tr from-[#f97316]/20 to-[#ec4899]/20 flex items-center justify-center text-[#f472b6] group-hover:scale-110 group-hover:text-white transition-all"><span class="material-symbols-outlined text-[18px]">photo_camera</span></span>
+              <div class="min-w-0">
+                <div class="font-code-sm text-code-sm text-on-surface font-semibold">Instagram</div>
+                <div class="font-code-sm text-[10px] text-on-surface-variant truncate">@achmad.saifudin</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- 5. WhatsApp (kartu lebar, gaya hover pulse hijau) -->
+          <!-- GANTI NOMOR WA ASLI (format: 62xxx tanpa spasi/tanda -) -->
+          <a class="wa-card group relative flex items-center gap-space-md p-space-lg rounded-xl border border-[#25D366]/30 bg-[#25D366]/5 hover:border-[#25D366] hover:shadow-[0_0_30px_rgba(37,211,102,0.25)] transition-all duration-300" href="https://wa.me/62XXXXXXXXXX" rel="noreferrer" target="_blank">
+            <span class="wa-icon-box relative w-11 h-11 rounded-xl bg-[#25D366]/15 border border-[#25D366]/30 text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white flex items-center justify-center transition-colors duration-300 flex-shrink-0">
+              <span class="wa-ping"></span>
+              <span class="wa-ping wa-ping-delay"></span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <div class="flex-1 min-w-0">
+              <div class="font-headline-sm text-headline-sm font-bold text-on-surface">WhatsApp</div>
+              <div class="font-code-sm text-code-sm text-on-surface-variant truncate">Respon tercepat — chat langsung untuk diskusi &amp; kolaborasi.</div>
+            </div>
+            <div class="hidden sm:flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-[#25D366]/15 text-[#25D366] font-code-sm text-code-sm font-bold group-hover:bg-[#25D366] group-hover:text-white transition-colors duration-300 flex-shrink-0">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
+              Mulai Chat
+            </div>
+          </a>
+
+          <!-- Status Respon -->
+          <div class="flex flex-wrap items-center gap-space-md px-space-md py-space-sm rounded-lg bg-surface-container-high/30 border border-secondary/20">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+            <span class="font-code-sm text-code-sm text-on-surface-variant">Rata-rata waktu respon: <strong class="text-secondary">&lt; 4 Jam kerja</strong></span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full bg-surface-container-lowest/90 backdrop-blur-md py-space-xl">
+    <div class="max-w-[76rem] mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm">
+        <div class="flex items-center gap-space-xs">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-secondary"></span>
+          <span class="font-code-sm text-code-sm text-on-surface-variant">SYS_STATUS: OPTIMAL</span>
+        </div>
+        <span class="text-outline-variant font-code-sm text-code-sm">|</span>
+        <span class="font-code-sm text-code-sm text-on-surface-variant">LATENCY: 14ms</span>
+      </div>
+      <div class="font-code-sm text-code-sm text-on-surface-variant text-center">© 2026 <span class="text-on-surface font-medium">Saifudin.dev</span>. Dibangun dengan presisi teknis.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* =========================================================
+   style.css — Portofolio Achmad Saifudin
+   Berisi: style dasar (menggantikan <style> inline), pola
+   titik (dot grid), dan animasi khusus WhatsApp hover.
+   ========================================================= */
+
+/* ---------- Dasar / Reset ---------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+/* Sembunyikan scrollbar (tetap bisa scroll) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Latar pola titik (menggantikan inline style hero) ---------- */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(0, 242, 254, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ---------- Animasi bounce lambat untuk badge melayang ---------- */
+.slow-bounce {
+  animation-duration: 4s;
+}
+
+/* =========================================================
+   WhatsApp Card — gaya hover kelima (efek pulse hijau)
+   Digunakan oleh elemen dengan class .wa-card di section
+   kontak. Ping berlapis akan "memancar" keluar saat hover.
+   ========================================================= */
+
+/* Pembungkus ikon: posisi relatif agar ping bisa diposisikan di dalamnya */
+.wa-icon-box {
+  position: relative;
+}
+
+/* Lingkaran pulse yang diam-diam menunggu hover */
+.wa-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(37, 211, 102, 0.6);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Saat kartu di-hover, jalankan animasi pulse (2 lapis, delay berbeda) */
+.wa-card:hover .wa-ping {
+  animation: waPing 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.wa-card:hover .wa-ping-delay {
+  animation-delay: 0.7s;
+}
+
+/* Keyframes pulse hijau khas WhatsApp */
+@keyframes waPing {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  35% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+/* ---------- Dukungan prefers-reduced-motion (aksesibilitas) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+  .wa-card:hover .wa-ping {
+    animation: none;
+  }
+  .slow-bounce {
+    animation-duration: 8s;
+  }
+}
